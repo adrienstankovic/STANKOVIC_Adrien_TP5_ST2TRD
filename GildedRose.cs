@@ -136,14 +136,18 @@ namespace csharp
     {
         public void updateBrie()
         {
+            // if the sell by date is not passed, the quality is increased by 1
             if (Quality < 50)
             {
                 Quality++;
             }
+            
+            // if the sell by date has passed, the quality is increased by 2
             if (SellIn <= 0)
             {
                 if (Quality < 50)
                 {
+                    // the quality is increased by 1 ONE MORE TIME
                     Quality++;
                 }
             }
@@ -157,24 +161,27 @@ namespace csharp
         {
             if (Quality < 50)
             {
+                // if the sell by date is not passed, the quality is increased by 1
                 Quality++;
 
                 if (Quality < 50)
                 {
+                    // if the sellIn value is 10 or below, the quality is increased by 2
                     if (SellIn < 11)
                     {
+                        // the quality is increased by 1 ONE MORE TIME
                         Quality++;
                     }
-
+                    
+                    // if the sellIn value is 10 or below, the quality is increased by 3
                     if (SellIn < 6)
                     {
+                        // the quality is increased by 1 ONE MORE TIME
                         Quality++;
                     }
                 }
             }
-
-            
-
+            // when the concert is passed, the quality is equal to 0
             if (SellIn <= 0)
             {
                 Quality = Quality - Quality;
@@ -187,16 +194,19 @@ namespace csharp
     {
         public void updateNormal()
         {
+            // if the sell by date is not passed, the quality is decreased by 1
             if (Quality > 0)
             {
-                Quality = Quality - 1;
+                Quality = Quality--;
             }
             
+            // if the sell by date is passed, the quality is decreased by 2
             if (SellIn <= 0)
             {
                 if (Quality > 0)
                 {
-                    Quality = Quality - 1;
+                    // the quality is increased by 1 ONE MORE TIME
+                    Quality = Quality--;
                 }
             }
             SellIn--;
