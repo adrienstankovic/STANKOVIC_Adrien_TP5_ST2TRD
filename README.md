@@ -8,4 +8,4 @@ For the part 3, the test files have been updated to do the test with my update o
 
 For the part 3 and 4, I use inheritance in order to have method for the specific items.
 
-The commit named "initial commit Part 2" corresponds to the commit we have to do after Part 2 and before Part 3.
+The commit named "initial commit Part 2" corresponds to the commit we had to do after Part 2 and before Part 3.
