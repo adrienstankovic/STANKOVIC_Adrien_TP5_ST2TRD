@@ -7,3 +7,5 @@ The file named "TP5_Report_SA_ST2TRD" contains :
 For the part 3, the test files have been updated to do the test with my update of the updateQuality() function which I called new_updateQuality.
 
 For the part 3 and 4, I use inheritance in order to have method for the specific items.
+
+The commit named "initial commit Part 2" corresponds to the commit we have to do after Part 2 and before Part 3.
