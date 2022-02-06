@@ -9,3 +9,5 @@ For the part 3, the test files have been updated to do the test with my update o
 For the part 3 and 4, I use inheritance in order to have methods for the specific items.
 
 The commit named "initial commit Part 2" corresponds to the commit we had to do after Part 2 and before Part 3.
+
+The tests for each update methods (updateQuality and new_updateQuality) cover 100% of the code.
