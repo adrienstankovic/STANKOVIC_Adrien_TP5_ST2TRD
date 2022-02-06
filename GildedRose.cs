@@ -129,11 +129,11 @@ namespace csharp
                 {
                     //nothing to happen
                 }
-
-                // if the item is considered an normal item, decreased by 1 or by 2
+                
+                // If the item is a "normal item" or a "conjured" one
                 if (Items[i].Name != BRIE && Items[i].Name != CONCERT && Items[i].Name != SULFURAS)
                 {
-                    // Part 4
+                    // Part 4 - Item is a conjured item
                     if (Items[i].Name.StartsWith(CONJURED))
                     {
                         Conjured conjured = new Conjured {Name = Items[i].Name, SellIn = Items[i].SellIn, Quality = Items[i].Quality};
@@ -141,6 +141,7 @@ namespace csharp
                         Items[i].Quality = conjured.Quality;
                         Items[i].SellIn = conjured.SellIn;
                     }
+                    // if the item is considered an normal item, decreased by 1 or by 2
                     else
                     {
                         Normal normal = new Normal {Name = Items[i].Name, SellIn = Items[i].SellIn, Quality = Items[i].Quality};
@@ -148,12 +149,14 @@ namespace csharp
                         Items[i].Quality = normal.Quality;
                         Items[i].SellIn = normal.SellIn; 
                     }
-
                 }
             }
         }
     }
 
+    /* ------------------------------------------------------------
+    * Part 3
+    ------------------------------------------------------------*/
 
     public class Brie : Item
     {
@@ -196,7 +199,7 @@ namespace csharp
                         Quality++;
                     }
                     
-                    // if the sellIn value is 10 or below, the quality is increased by 3
+                    // if the sellIn value is 6 or below, the quality is increased by 3
                     if (SellIn < 6)
                     {
                         // the quality is increased by 1 ONE MORE TIME
@@ -204,12 +207,14 @@ namespace csharp
                     }
                 }
             }
+            SellIn--;
+            
             // when the concert is passed, the quality is equal to 0
-            if (SellIn <= 0)
+            if (SellIn < 0)
             {
                 Quality = Quality - Quality;
             }
-            SellIn--;
+            
         }
     }
 
@@ -229,7 +234,7 @@ namespace csharp
             {
                 if (Quality > 0)
                 {
-                    // the quality is increased by 1 ONE MORE TIME
+                    // the quality is decreased by 1 ONE MORE TIME
                     Quality--;
                 }
             }
@@ -245,21 +250,22 @@ namespace csharp
         public void updateConjured()
         {
             // if the sell by date is not passed, the quality is decreased by 2
-            if (Quality > 0)
+            if (Quality > 1)
             {
                 Quality = Quality-2;
             }
+            SellIn--;
             
             // if the sell by date is passed, the quality is decreased by 4
-            if (SellIn <= 0)
+            if (SellIn < 0)
             {
-                if (Quality > 0)
+                if (Quality > 1)
                 {
-                    // the quality is increased by 2 ONE MORE TIME
+                    // the quality is decreased by 2 ONE MORE TIME
                     Quality = Quality-2;
                 }
             }
-            SellIn--;
+            
         }
     }
 }
