@@ -2,7 +2,7 @@
 
 The file named "TP5_Report_SA_ST2TRD" contains :
 - the answers of the questions in Part 1
-- the answers to the question in Part 2
+- the answer to the question in Part 2
 
 For the part 3, the test files have been updated to do the test with my update of the updateQuality() function which I called new_updateQuality.
 
