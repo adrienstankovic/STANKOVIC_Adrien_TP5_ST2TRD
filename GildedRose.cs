@@ -100,7 +100,7 @@ namespace csharp
                 // Update according the item
                 
                 // If the item is an "Aged Brie"
-                if (Items[i].Name == BRIE)
+                if (Items[i].Name.Equals(BRIE))
                 {
                     Brie brie = new Brie {Name = Items[i].Name, SellIn = Items[i].SellIn, Quality = Items[i].Quality};
                     brie.updateBrie();
@@ -109,7 +109,7 @@ namespace csharp
 
                 }
                 // If the item is an "Backstage passes to a TAFKAL80ETC concert"
-                if (Items[i].Name == CONCERT)
+                if (Items[i].Name.Equals(CONCERT))
                 {
                     Concert concert = new Concert {Name = Items[i].Name, SellIn = Items[i].SellIn, Quality = Items[i].Quality};
                     concert.updateConcert();
@@ -140,16 +140,14 @@ namespace csharp
             {
                 Quality++;
             }
-
-            SellIn--;
-
-            if (SellIn < 0)
+            if (SellIn <= 0)
             {
                 if (Quality < 50)
                 {
                     Quality++;
                 }
             }
+            SellIn--;
         }
     }
 
@@ -175,12 +173,13 @@ namespace csharp
                 }
             }
 
-            SellIn--;
+            
 
-            if (SellIn < 0)
+            if (SellIn <= 0)
             {
                 Quality = Quality - Quality;
             }
+            SellIn--;
         }
     }
 
@@ -192,14 +191,15 @@ namespace csharp
             {
                 Quality = Quality - 1;
             }
-            SellIn--;
-            if (SellIn < 0)
+            
+            if (SellIn <= 0)
             {
                 if (Quality > 0)
                 {
                     Quality = Quality - 1;
                 }
             }
+            SellIn--;
         }
     }
 }
