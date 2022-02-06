@@ -5,7 +5,7 @@ using csharp;
 namespace GildedRose.Test
 {
     [TestFixture]
-    public class TestChesse
+    public class TestCheese
     {
         [Test]
         public void cheese_quality_with_sellIn_over_0()
@@ -20,7 +20,8 @@ namespace GildedRose.Test
             csharp.GildedRose app = new csharp.GildedRose(Items);
             
             // Act
-            app.UpdateQuality();
+            //app.UpdateQuality();
+            app.new_updateQuality();
             
             // Assert
             // The quality should be equal to 10+1 = 11
@@ -40,7 +41,8 @@ namespace GildedRose.Test
             csharp.GildedRose app = new csharp.GildedRose(Items);
             
             // Act
-            app.UpdateQuality();
+            //app.UpdateQuality();
+            app.new_updateQuality();
             
             // Assert
             // The quality should be equal to 10+2 = 11
@@ -60,7 +62,8 @@ namespace GildedRose.Test
             csharp.GildedRose app = new csharp.GildedRose(Items);
             
             // Act
-            app.UpdateQuality();
+            //app.UpdateQuality();
+            app.new_updateQuality();
             
             // Assert
             // The quality should be equal to 10+2 = 11
@@ -80,7 +83,8 @@ namespace GildedRose.Test
             csharp.GildedRose app = new csharp.GildedRose(Items);
             
             // Act
-            app.UpdateQuality();
+            //app.UpdateQuality();
+            app.new_updateQuality();
             
             // Assert
             // The quality should be equal to the maximum value: 50

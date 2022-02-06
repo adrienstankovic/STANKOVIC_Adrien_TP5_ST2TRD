@@ -20,7 +20,8 @@ namespace GildedRose.Test
             csharp.GildedRose app = new csharp.GildedRose(Items);
             
             // Act
-            app.UpdateQuality();
+            //app.UpdateQuality();
+            app.new_updateQuality();
             
             // Assert
             // The quality should be equal to 10+1 = 11
@@ -40,7 +41,8 @@ namespace GildedRose.Test
             csharp.GildedRose app = new csharp.GildedRose(Items);
             
             // Act
-            app.UpdateQuality();
+            //app.UpdateQuality();
+            app.new_updateQuality();
             
             // Assert
             // The quality should be equal to 10+2 = 12
@@ -60,7 +62,8 @@ namespace GildedRose.Test
             csharp.GildedRose app = new csharp.GildedRose(Items);
             
             // Act
-            app.UpdateQuality();
+            //app.UpdateQuality();
+            app.new_updateQuality();
             
             // Assert
             // The quality should be equal to 10+3 = 13
@@ -80,7 +83,8 @@ namespace GildedRose.Test
             csharp.GildedRose app = new csharp.GildedRose(Items);
             
             // Act
-            app.UpdateQuality();
+            //app.UpdateQuality();
+            app.new_updateQuality();
             
             // Assert
             // The quality should be equal to 0
@@ -100,7 +104,8 @@ namespace GildedRose.Test
             csharp.GildedRose app = new csharp.GildedRose(Items);
             
             // Act
-            app.UpdateQuality();
+            //app.UpdateQuality();
+            app.new_updateQuality();
             
             // Assert
             // The quality should be equal to 50

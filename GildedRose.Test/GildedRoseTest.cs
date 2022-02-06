@@ -13,7 +13,8 @@ namespace GildedRose.Test
         {
             IList<Item> Items = new List<Item> { new Item { Name = "foo", SellIn = 0, Quality = 0 } };
             csharp.GildedRose app = new csharp.GildedRose(Items);
-            app.UpdateQuality();
+            //app.UpdateQuality();
+            app.new_updateQuality();
             Assert.AreEqual("foo", Items[0].Name);
         }
     }

@@ -17,7 +17,8 @@ namespace GildedRose.Test
             csharp.GildedRose app = new csharp.GildedRose(Items);
             
             // Act
-            app.UpdateQuality();
+            //app.UpdateQuality();
+            app.new_updateQuality();
             
             // Assert
             // The sellIn should be equal to 10-1 = 9

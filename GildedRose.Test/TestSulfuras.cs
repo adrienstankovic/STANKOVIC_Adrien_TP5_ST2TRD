@@ -20,7 +20,8 @@ namespace GildedRose.Test
             csharp.GildedRose app = new csharp.GildedRose(Items);
             
             // Act
-            app.UpdateQuality();
+            //app.UpdateQuality();
+            app.new_updateQuality();
             
             // Assert
             // The sellin should stay at 4
