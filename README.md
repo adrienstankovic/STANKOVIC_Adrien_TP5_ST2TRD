@@ -13,5 +13,5 @@ The part 3 and part 4 are done on the "GildedRose.cs" file and are situated afte
 The tests on each update methods (updateQuality and new_updateQuality) are green and cover 100% of the code. I add tests for the "conjured" items.
 
 
-## The commit named "initial commit Part 2" corresponds to the commit we had to do after Part 2 and before Part 3.
-## The commit namred "Final commit" corresponds to my final commit on the project and the final version of the file "GildedRose.cs".
+### The commit named "initial commit Part 2" corresponds to the commit we had to do after Part 2 and before Part 3.
+### The commit namred "Final commit" corresponds to my final commit on the project and the final version of the file "GildedRose.cs".
