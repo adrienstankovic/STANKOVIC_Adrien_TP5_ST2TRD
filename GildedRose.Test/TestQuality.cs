@@ -45,7 +45,7 @@ namespace GildedRose.Test
             app.new_updateQuality();
             
             // Assert
-            // The quality should be equal to 10-2 = 9
+            // The quality should be equal to 10-2 = 8
             Assert.AreEqual(8 , Items[0].Quality);
         }
         

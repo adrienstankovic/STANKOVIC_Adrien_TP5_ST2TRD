@@ -5,9 +5,13 @@ namespace csharp
 {
     public class GildedRose
     {
+        // Part 3
         private const string CONCERT = "Backstage passes to a TAFKAL80ETC concert";
         private const string BRIE = "Aged Brie";
         private const string SULFURAS = "Sulfuras, Hand of Ragnaros";
+        
+        // Part 4
+        private const string CONJURED = "Conjured";
 
         IList<Item> Items;
 
@@ -92,6 +96,9 @@ namespace csharp
             }
         }
 
+        /* ------------------------------------------------------------
+         * Part 3
+         ------------------------------------------------------------*/
         public void new_updateQuality()
         {
             for (var i = 0; i < Items.Count; i++)
@@ -117,16 +124,32 @@ namespace csharp
                     Items[i].SellIn = concert.SellIn;
                 }
                 
+                // if the item is a "sulfuras", we do nothing, the SellIn and the quality stay the same over time
+                if (Items[i].Name.Equals(SULFURAS))
+                {
+                    //nothing to happen
+                }
+
                 // if the item is considered an normal item, decreased by 1 or by 2
                 if (Items[i].Name != BRIE && Items[i].Name != CONCERT && Items[i].Name != SULFURAS)
                 {
-                    Normal normal = new Normal {Name = Items[i].Name, SellIn = Items[i].SellIn, Quality = Items[i].Quality};
-                    normal.updateNormal();
-                    Items[i].Quality = normal.Quality;
-                    Items[i].SellIn = normal.SellIn;
+                    // Part 4
+                    if (Items[i].Name.StartsWith(CONJURED))
+                    {
+                        Conjured conjured = new Conjured {Name = Items[i].Name, SellIn = Items[i].SellIn, Quality = Items[i].Quality};
+                        conjured.updateConjured();
+                        Items[i].Quality = conjured.Quality;
+                        Items[i].SellIn = conjured.SellIn;
+                    }
+                    else
+                    {
+                        Normal normal = new Normal {Name = Items[i].Name, SellIn = Items[i].SellIn, Quality = Items[i].Quality};
+                        normal.updateNormal();
+                        Items[i].Quality = normal.Quality;
+                        Items[i].SellIn = normal.SellIn; 
+                    }
+
                 }
-                
-                // if the item is a "sulfuras", we do nothing, the SellIn and the quality stay the same over time
             }
         }
     }
@@ -197,16 +220,43 @@ namespace csharp
             // if the sell by date is not passed, the quality is decreased by 1
             if (Quality > 0)
             {
-                Quality = Quality--;
+                Quality--;
             }
+            SellIn--;
             
             // if the sell by date is passed, the quality is decreased by 2
-            if (SellIn <= 0)
+            if (SellIn < 0)
             {
                 if (Quality > 0)
                 {
                     // the quality is increased by 1 ONE MORE TIME
-                    Quality = Quality--;
+                    Quality--;
+                }
+            }
+        }
+    }
+    
+    /* ------------------------------------------------------------
+    * Part 4
+    ------------------------------------------------------------*/
+
+    public class Conjured : Item
+    {
+        public void updateConjured()
+        {
+            // if the sell by date is not passed, the quality is decreased by 2
+            if (Quality > 0)
+            {
+                Quality = Quality-2;
+            }
+            
+            // if the sell by date is passed, the quality is decreased by 4
+            if (SellIn <= 0)
+            {
+                if (Quality > 0)
+                {
+                    // the quality is increased by 2 ONE MORE TIME
+                    Quality = Quality-2;
                 }
             }
             SellIn--;

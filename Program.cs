@@ -53,28 +53,6 @@ namespace csharp
                 //app.UpdateQuality();
                 app.new_updateQuality();
             }
-            
-
-            /*
-            IList<Item> Items = new List<Item>
-            {
-                new Item {Name = "Aged Brie", SellIn = 1, Quality = 20}
-            };
-
-            var app = new GildedRose(Items);
-            
-            for (var i = 0; i < 4; i++)
-            {
-                Console.WriteLine("-------- day " + i + " --------");
-                Console.WriteLine("name, sellIn, quality");
-                for (var j = 0; j < Items.Count; j++)
-                {
-                    System.Console.WriteLine(Items[j]);
-                }
-                Console.WriteLine("");
-                app.new_updateQuality();
-            }
-            */
         }
     }
 }
