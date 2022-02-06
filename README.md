@@ -2,7 +2,8 @@
 
 The file named "TP5_Report_SA_ST2TRD" contains :
 - the answers of the questions in Part 1
-- the explanation of the tests in Part 2
 - the answers to the question in Part 2
-- the explanation of the changes in Part 3
-- the explanation of the changes in Part 4
+
+For the part 3, the test files have been updated to do the test with my update of the updateQuality() function which I called new_updateQuality.
+
+For the part 3 and 4, I use inheritance in order to have method for the specific items.
