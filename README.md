@@ -1,5 +1,8 @@
 # STANKOVIC_Adrien_TP5_ST2TRD
 
-The answers to questions of the part 1 are located in the file named " ".
-
-The answer to the question of the Part 1 is also located in the file named " ".
+The file named "TP5_Report_SA_ST2TRD" contains :
+- the answers of the questions in Part 1
+- the explanation of the tests in Part 2
+- the answers to the question in Part 2
+- the explanation of the changes in Part 3
+- the explanation of the changes in Part 4
