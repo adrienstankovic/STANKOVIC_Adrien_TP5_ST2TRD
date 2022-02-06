@@ -10,4 +10,4 @@ For the part 3 and 4, I use inheritance in order to have methods for the specifi
 
 The commit named "initial commit Part 2" corresponds to the commit we had to do after Part 2 and before Part 3.
 
-The tests for each update methods (updateQuality and new_updateQuality) are green and cover 100% of the code.
+The tests on each update methods (updateQuality and new_updateQuality) are green and cover 100% of the code. I add tests for the "conjured" items.
